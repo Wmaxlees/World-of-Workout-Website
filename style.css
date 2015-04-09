@@ -1,0 +1,47 @@
+﻿ul#menu {
+    padding-left: 0px;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px 8px 8px 8px;
+}
+
+ul#menu li a:hover {
+    background-color: black;
+}
+
+iframe#content {
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 0px;
+    border-top: 2px solid black;
+    width: 80%;
+    height: 90%;
+}
+
+hr {
+    width: 500px;
+    float: left;
+}
+
+div#stats {
+    padding-left: 50px;
+}
+
+img#profile_picture {
+    height: 200px;
+    width: 200px;
+}
+
+span#stat_name {
+    float: left;
+    width: 400px;
+}
