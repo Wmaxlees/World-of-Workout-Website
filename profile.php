@@ -7,6 +7,14 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
     <body>
+		<script>
+			var username = getCookie("woe-user");
+			if (username === "") {
+				Window.alert("Login!");
+			}
+
+		</script>
+
         <table style="border-bottom: 1px solid black; width: 100%;">
             <tr>
                 <td style="width:210px;">

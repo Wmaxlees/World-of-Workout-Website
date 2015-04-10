@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 
-<html style="height: 100%;">
+<html style="height: 100%;" ng-app="WoEApp">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="angular.min.js"></script>
+		<script src="angular-ui-router.js"></script>
+		<script src="app.js"></script>
         <title>World of Workout</title>
     </head>
-    <body ng-app="WorldOfWorkout" style="height: 100%;">
-        <section ng-controller="MenuController as menu" style="height: 100%;">
-            <ul id="menu">
-                <li><a href>Profile</a></li>
-                <li><a href>Workouts</a></li>
-            </ul>
+    <body style="height: 100%;">
+
+        <ui-view></ui-view>
+
+
+		<script type="text/ng-template" id="/home.html">
+			<section style="height: 100%;">
+				<ul id="menu">
+					<li><a href>Profile</a></li>
+					<li><a href>Workouts</a></li>
+				</ul>
             
-            <iframe id="content" src="profile.php"></iframe>
-        </section>
+				<iframe id="content" src="profile.php"></iframe>
+			</section>
+		</script>
+
     </body>
 </html>
