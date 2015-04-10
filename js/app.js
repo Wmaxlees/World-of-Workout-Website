@@ -16,14 +16,39 @@ function ($stateProvider, $urlRouterProvider) {
         url: '/login',
         templateUrl: '/login.html',
         controller: 'LoginCtrl'
+    })
+
+    .state('create_account', {
+        url: '/create_account',
+        templateUrl: '/createAccount.html',
+        controller: 'CreateAccountCtrl'
     });
 
-    $urlRouterProvider.otherwise('login');
+    $urlRouterProvider.otherwise('create_account');
 }]);
 
 app.controller('MainCtrl', [
     '$scope',
     function ($scope) {
+    }
+]);
+
+app.controller('CreateAccountCtrl', [
+    '$scope',
+    function ($scope) {
+
+        $scope.createUser = function () {
+            // Create the httprequest object
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:55421/api/users", false);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("username=" + $scope.user +
+                     "&password=" + $scope.pass_one +
+                     "&name=" + $scope.name
+            );
+
+            
+        }
     }
 ]);
 
